@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+	<script src="js/quiz.js"></script>
+
+</head>
+<body>
+
+<!-- first 'page' -->
+<section data-role="page" id="first">
+	<div data-role="header">
+		<h1>Quiz Time</h1>
+	</div><!-- /header -->
+	<div data-role="content">
+		<p>Welcome to Quiz Time.</p>
+		<p>This game consists of 10 x True or False questions</p>
+		<p>Trivia questions provided by https://opentdb.com/</p>
+
+	  <a href="#game" data-role="button" data-transition="slide">Play Quiz Time!</a>
+
+
+	</div><!-- /content -->
+	<div data-role="footer" data-position="fixed">
+		<h4>&copy; Kris Bebbington</h4>
+	</div><!-- /footer -->
+</section><!-- /page -->
+
+<!-- game 'page' -->
+<section data-role="page" id="game">
+	<div data-role="header" data-add-back-btn="true" data-direction="reverse">
+		<h1>Good Luck!</h1>
+	</div><!-- /header -->
+	<div data-role="content">
+		<p>Click below to load questions.</p>
+		<p>Trivia questions provided by https://opentdb.com/</p>
+
+		<a class="ui-btn ui-corner-all ui-shadow ui-btn-inline" id="load">Load Questions!</a>
+		<a href="#card" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="slide" id="go">Play Game!</a>
+
+
+		<!-- The Game Popup -->
+		<div data-role="popup" data-dismissible="false" data-transition="flow" id="card">
+
+			<div role="main" class="ui-content">
+				<div id="questionNumber" data-role="header">
+					<h1></h1>
+				</div>
+
+					<p id="category"></p>
+					<p id="question"></p>
+					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+					<a id="true" class="ui-btn ui-corner-all ui-shadow ui-btn-inline submit">True</a>
+					<a id="false" class="ui-btn ui-corner-all ui-shadow ui-btn-inline submit">False</a>
+					<p id="result"></p>
+				</div>
+
+		</div>
+
+		<!--End of Game Popup -->
+		<div data-role="popup" data-dismissible="false" data-transition="flow" id="endgame">
+
+			<div role="main" class="ui-content">
+				<div data-role="header">
+					<h1>Game Over!</h1>
+				</div>
+					<p id="score"></p>
+
+
+
+					<a id="quit" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Quit</a>
+
+				</div>
+
+		</div>
+		</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>&copy; Kris Bebbington</h4>
+	</div><!-- /footer -->
+</section><!-- /page -->
+
+
+</body>
+</html>
